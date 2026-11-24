@@ -1,0 +1,146 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #172c35;
+  background: #f7f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f7f2;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button, a {
+  transition: 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #d9f36a;
+  color: #172c35;
+}
+
+.page-container {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section-label {
+  color: #52752d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: #172c35;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.surface-card {
+  background: white;
+  border: 1px solid #e8e9df;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(23,44,53,.045);
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 12px;
+  padding: 13px 20px;
+  background: #172c35;
+  color: white;
+  font-weight: 700;
+}
+
+.primary-btn:hover {
+  background: #2a4650;
+  transform: translateY(-1px);
+}
+
+.accent-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 12px;
+  padding: 13px 20px;
+  background: #d9f36a;
+  color: #172c35;
+  font-weight: 800;
+}
+
+.accent-btn:hover {
+  background: #c9e653;
+  transform: translateY(-1px);
+}
+
+.form-field {
+  width: 100%;
+  border: 1px solid #e1e5dc;
+  border-radius: 12px;
+  background: white;
+  padding: 13px 14px;
+  outline: none;
+  color: #172c35;
+}
+
+.form-field:focus {
+  border-color: #92ad45;
+  box-shadow: 0 0 0 3px rgba(217,243,106,.3);
+}
+
+.dashboard-shell {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f5ef;
+}
+
+.dashboard-main {
+  min-width: 0;
+  flex: 1;
+  padding: 32px;
+}
+
+@media (max-width: 640px) {
+  .page-container {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .dashboard-main {
+    padding: 20px 14px;
+  }
+}
+
+html {
+  scroll-behavior: auto;
+}
